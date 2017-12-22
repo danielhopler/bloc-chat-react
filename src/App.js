@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase';
+import RoomList from './components/RoomList';
 
 // Initialize Firebase
   var config = {
@@ -17,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+      <RoomList firebase= {firebase}/>
       </div>
     );
   }
