@@ -15,6 +15,7 @@ class MessageList extends Component {
     });
   }
 
+
   render() {
 
     const messageLists = this.state.messages.map( message =>
@@ -24,6 +25,7 @@ class MessageList extends Component {
     return (
       <section className="message-list">
         <ul>{messageLists}</ul>
+
       </section>
     );
   }

@@ -16,6 +16,13 @@ import MessageList from './components/MessageList';
   firebase.initializeApp(config);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {activeRoom: }
+  }
+
+
+
   render() {
     return (
       <div className="App">
