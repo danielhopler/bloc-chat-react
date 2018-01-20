@@ -29,10 +29,14 @@ class RoomList extends Component {
     this.setState({ newRoomName: '' });
   }
 
+  chooseRoom(room){
+    this.props.chooseActiveRoomCallback(room);
+  }
+
   render () {
 
     const roomLists = this.state.rooms.map( room =>
-      <li key={room.key}>{room.name}</li>
+      <li key={room.key} onClick={(e) => this.chooseRoom(room)}>{room.name}</li>
     );
 
     return (

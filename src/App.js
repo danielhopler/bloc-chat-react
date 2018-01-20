@@ -18,16 +18,29 @@ import MessageList from './components/MessageList';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {activeRoom: }
+    this.state = {activeRoom: "" }
   }
 
-
+  chooseActiveRoomCallback = (room) => {
+    this.setState({activeRoom:room});
+  }
 
   render() {
+
     return (
       <div className="App">
-      <RoomList firebase= {firebase} />
-      <MessageList firebase= {firebase} />
+      <h1>{this.state.activeRoom.name || 'Choose Room'}</h1>
+      <RoomList
+        firebase={firebase}
+        chooseActiveRoomCallback={this.chooseActiveRoomCallback}
+      />
+      {this.state.activeRoom.key ?
+      <MessageList
+        firebase={firebase}
+        activeRoom= {this.state.activeRoom}
+      />
+      : null
+      }
       </div>
     );
   }
