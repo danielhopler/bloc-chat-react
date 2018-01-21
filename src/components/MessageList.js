@@ -9,7 +9,7 @@ class MessageList extends Component {
 
   handleChange= (e) => {
     this.setState({
-      username: "User",
+      username: this.props.currentUser.displayName,
       content: e.target.value,
       sentAt: this.props.firebase.database.ServerValue.TIMESTAMP,
       roomId: this.props.activeRoom.key
@@ -18,6 +18,7 @@ class MessageList extends Component {
 
   createMessage= (e) => {
     e.preventDefault();
+    if (!this.state.content) { return}
     this.messagesRef.push({
       username: this.state.username,
       content: this.state.content,
