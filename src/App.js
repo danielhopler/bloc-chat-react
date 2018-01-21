@@ -28,7 +28,6 @@ class App extends Component {
 
   setUser = (currentuser) => {
     this.setState({user: currentuser});
-    console.log(currentuser.displayName);
   }
 
   render() {
