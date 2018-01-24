@@ -39,6 +39,7 @@ class App extends Component {
       <RoomList
         firebase={firebase}
         chooseActiveRoomCallback={this.chooseActiveRoomCallback}
+        activeRoom={this.state.activeRoom}
       />
       {this.state.activeRoom.key ?
       <MessageList
