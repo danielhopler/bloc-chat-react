@@ -33,9 +33,9 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="App" id="wrap" >
 
-      <h1>{this.state.activeRoom.name || 'Choose Room'}</h1>
+
       <RoomList
         firebase={firebase}
         chooseActiveRoomCallback={this.chooseActiveRoomCallback}

@@ -1,0 +1,13 @@
+.message-list li {
+  list-style: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+#send-button {
+  background-color: #4d4d4d;
+  color: white;
+
+
+}

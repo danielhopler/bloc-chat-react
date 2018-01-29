@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Messages.css';
 
 class MessageList extends Component {
   constructor(props) {
@@ -47,15 +48,15 @@ class MessageList extends Component {
 
     const newMessage = (
       <form onSubmit={this.createMessage}>
-        <input type="text" value={this.state.content} onChange={this.handleChange}/>
-        <input type="submit" value="Post"/>
+        <input id="message-content" type="text" value={this.state.content} onChange={this.handleChange}/>
+        <input id="send-button" type="submit" value="Send" />
       </form>
     );
 
     return (
-      <section className="message-list">
-        <ul>{messageLists}</ul>
-        <div>{newMessage}</div>
+      <section>
+        <ul className="message-list">{messageLists}</ul>
+        <div className="new-message">{newMessage}</div>
       </section>
     );
   }

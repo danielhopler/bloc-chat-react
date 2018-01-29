@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './RoomList.css';
 
 class RoomList extends Component {
   constructor(props) {
@@ -56,6 +57,7 @@ class RoomList extends Component {
 
     return (
       <section className="room-list">
+        <h1 >{this.props.activeRoom.name || 'Choose Room'}</h1>
         <ul>{roomLists}</ul>
 
         <form onSubmit= {this.createRoom}>
